@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Vision &amp; Personal Goals — one-page plan</title>
+<meta name="description" content="A one-page business vision and personal goals plan for a graphic design studio: the revenue goal, the clients, the schedule, and the life it pays for.">
+<style>
+  :root {
+    --ink: #16233a;
+    --ink-soft: #2c394f;
+    --bronze: #9a6b2f;
+    --cream: #f5f2ec;
+    --paper: #fdfcfa;
+    --rule: #d9d2c4;
+    --muted: #5b6675;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  a { color: inherit; }
+
+  /* ── Top bar ─────────────────────────────────────────────── */
+  .bar {
+    border-bottom: 1px solid var(--rule);
+    background: rgba(253, 252, 250, 0.92);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .bar-in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 62px;
+  }
+
+  .mark {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+
+  .bar-link {
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: border-color 140ms ease, color 140ms ease;
+  }
+
+  .bar-link:hover { border-color: var(--bronze); color: var(--bronze); }
+
+  /* ── Hero ────────────────────────────────────────────────── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: 64px;
+    align-items: center;
+    padding: 76px 28px 84px;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+
+  h1 {
+    margin: 0 0 22px;
+    font-size: clamp(38px, 5vw, 56px);
+    line-height: 1.03;
+    letter-spacing: -0.022em;
+    font-weight: 700;
+  }
+
+  h1 em {
+    font-style: normal;
+    color: var(--bronze);
+  }
+
+  .lede {
+    margin: 0 0 30px;
+    font-size: 17.5px;
+    line-height: 1.62;
+    color: var(--muted);
+    max-width: 44ch;
+  }
+
+  .cta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 38px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 22px;
+    border-radius: 2px;
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: transform 140ms ease, background 140ms ease;
+  }
+
+  .btn span {
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #c7b48e;
+    padding-left: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .btn:hover { background: #22304a; transform: translateY(-1px); }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--ink-soft);
+    padding: 15px 4px;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 140ms ease, color 140ms ease;
+  }
+
+  .btn-ghost:hover { color: var(--bronze); border-color: var(--bronze); }
+
+  .facts {
+    list-style: none;
+    margin: 0;
+    padding: 22px 0 0;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .facts li { display: block; }
+
+  .facts b {
+    display: block;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    margin-bottom: 2px;
+  }
+
+  .facts small {
+    display: block;
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  /* ── Sheet preview ───────────────────────────────────────── */
+  .sheet {
+    margin: 0;
+    position: relative;
+  }
+
+  .sheet a {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--rule);
+    box-shadow: 0 1px 2px rgba(22, 35, 58, 0.04), 0 22px 50px -18px rgba(22, 35, 58, 0.28);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .sheet a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1px 2px rgba(22, 35, 58, 0.05), 0 30px 60px -20px rgba(22, 35, 58, 0.34);
+  }
+
+  .sheet img { display: block; width: 100%; height: auto; }
+
+  .sheet figcaption {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .sheet figcaption a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .sheet figcaption a:hover { color: var(--bronze); border-color: var(--bronze); }
+
+  /* ── Inside ──────────────────────────────────────────────── */
+  .inside {
+    background: var(--cream);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 66px 0 70px;
+  }
+
+  .inside-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 34px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(24px, 2.8vw, 31px);
+    letter-spacing: -0.018em;
+    font-weight: 700;
+  }
+
+  .inside-head p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+
+  .cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 46px 60px;
+  }
+
+  .col h3 {
+    margin: 0 0 14px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+
+  .col ul { list-style: none; margin: 0; padding: 0; }
+
+  .col li {
+    padding: 13px 0;
+    border-top: 1px solid rgba(22, 35, 58, 0.1);
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: 18px;
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+
+  .col li:last-child { border-bottom: 1px solid rgba(22, 35, 58, 0.1); }
+
+  .col li b {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    padding-top: 2px;
+  }
+
+  .col li span { color: var(--muted); }
+
+  /* ── Closing ─────────────────────────────────────────────── */
+  .close {
+    padding: 72px 0 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .close p {
+    margin: 0;
+    max-width: 48ch;
+    font-size: 16px;
+    color: var(--muted);
+  }
+
+  .close strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 24px 0 34px;
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  a:focus-visible, .sheet a:focus-visible {
+    outline: 2px solid var(--bronze);
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 880px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 46px;
+      padding: 52px 24px 60px;
+    }
+    .sheet { order: -1; max-width: 460px; }
+    .cols { grid-template-columns: 1fr; gap: 34px; }
+    .close { padding: 56px 0 60px; }
+    .facts { gap: 14px; }
+    .facts b { font-size: 17px; }
+  }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 0 22px; }
+    .hero { padding: 40px 22px 52px; }
+    .facts { grid-template-columns: 1fr 1fr; row-gap: 20px; }
+    .col li { grid-template-columns: 1fr; gap: 3px; }
+    .btn span { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap bar-in">
+    <span class="mark">Vision · 2026–2027</span>
+    <a class="bar-link" href="business-vision-and-personal-goals.pdf" download>Download the PDF</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero wrap">
+    <div>
+      <p class="eyebrow">Business vision &amp; personal goals</p>
+      <h1>One page for the studio.<br>And for the life it <em>pays for</em>.</h1>
+      <p class="lede">
+        A graphic design practice built on recurring client work — the revenue goal, the clients
+        and schedule that get there, and the personal numbers standing behind it.
+      </p>
+
+      <div class="cta">
+        <a class="btn" href="business-vision-and-personal-goals.pdf" download>
+          Download the PDF
+          <span>1 page · 33 KB</span>
+        </a>
+        <a class="btn-ghost" href="business-vision-and-personal-goals.docx" download>
+          Editable Word version
+        </a>
+      </div>
+
+      <ul class="facts">
+        <li><b>$90,000</b><small>One-year gross revenue goal</small></li>
+        <li><b>10–12</b><small>Clients on recurring retainers</small></li>
+        <li><b>4-day</b><small>Working week, about 30 hours</small></li>
+      </ul>
+    </div>
+
+    <figure class="sheet">
+      <a href="business-vision-and-personal-goals.pdf" download>
+        <img src="preview.png" alt="Page one of the Business Vision and Personal Goals document: a business section with revenue, income, clients, project types and schedule, and a personal section covering definition of success, financial goals, travel and projects.">
+      </a>
+      <figcaption>
+        <span>Letter size · single page</span>
+        <a href="business-vision-and-personal-goals.pdf" download>Open PDF</a>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="inside">
+    <div class="wrap">
+      <div class="inside-head">
+        <h2>What's on the page</h2>
+        <p>Everything fits on one sheet, so nothing gets lost.</p>
+      </div>
+
+      <div class="cols">
+        <div class="col">
+          <h3>1. The business</h3>
+          <ul>
+            <li><b>Revenue goal</b><span>$90,000 gross for the year, around $7,500 a month.</span></li>
+            <li><b>Monthly income</b><span>$7,500 a month taken out as income, not left in the business.</span></li>
+            <li><b>Clients</b><span>10–12 on recurring retainers — residual income whether or not a new project starts.</span></li>
+            <li><b>Projects</b><span>Creative, interactive websites with an admin area and an AI assistant that helps run the site.</span></li>
+            <li><b>Schedule</b><span>A four-day, roughly 30-hour week; the fifth day is for the portfolio and the product.</span></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>2. Personal goals</h3>
+          <ul>
+            <li><b>Success</b><span>Financial independence early, full creative control, and a scoreboard of my own making.</span></li>
+            <li><b>Home</b><span>A $500,000–$750,000 place inside two to three years, with the down payment mapped.</span></li>
+            <li><b>Wealth</b><span>Digital products first, then crypto and equity — capped, with the rest kept boring.</span></li>
+            <li><b>Retirement</b><span>Age 60, $1,500,000, so a 4% withdrawal still covers the year.</span></li>
+            <li><b>Travel</b><span>Four two-week trips costed per person, with what each one is built from.</span></li>
+            <li><b>Projects</b><span>Blacksmithing, photography gear, and building a product of my own.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap close">
+    <p>
+      <strong>Take the whole thing with you.</strong> The PDF is print-ready at Letter size; the Word
+      file is there for the day a number needs to change.
+    </p>
+    <div class="cta" style="margin:0">
+      <a class="btn" href="business-vision-and-personal-goals.pdf" download>
+        Download the PDF
+        <span>1 page · 33 KB</span>
+      </a>
+      <a class="btn-ghost" href="business-vision-and-personal-goals.docx" download>Word version</a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer>
+      <span>Graphic design studio · one-year plan, November 2026 – November 2027</span>
+      <span>Letter size · 1 page</span>
+    </footer>
+  </div>
+
+</main>
+
+</body>
+</html>
